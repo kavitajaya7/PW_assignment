@@ -3,6 +3,7 @@
 #include <unordered_map>
 #include <unordered_set>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
@@ -57,37 +58,51 @@ public:
         }
     }
 
-    void displayBoardingHouses()
+    vector<string> displayBoardingHouses()
     {
+        vector<string> out;
+
         for (auto &classPref : houses)
         {
+            string out_line;
+
             for (auto &foodPref : classPref.second)
             {
-                cout << classPref.first << foodPref.first << " : [";
+                out_line += classPref.first + foodPref.first + " : [";
+
                 while (!foodPref.second.empty())
                 {
-                    cout << foodPref.second.front();
+                    out_line += foodPref.second.front();
                     foodPref.second.pop();
                     if (!foodPref.second.empty())
                     {
-                        cout << ",";
+                        out_line += ",";
                     }
                 }
-                cout << "]" << endl;
+                out_line += "]\n";
             }
+
+            out.push_back(out_line);
         }
 
-        cout << "NA: [";
+        string out_line;
+
+        out_line += "NA: [";
         while (!unallocatedStudents.empty())
         {
-            cout << unallocatedStudents.front().rollNumber;
+            out_line += unallocatedStudents.front().rollNumber;
             unallocatedStudents.pop();
             if (!unallocatedStudents.empty())
             {
-                cout << ",";
+                out_line += ",";
             }
         }
-        cout << "]" << endl;
+        out_line += "]\n";
+        out.push_back(out_line);
+
+        sort(out.begin(), out.end());
+
+        return out;
     }
 };
 
