@@ -62,7 +62,7 @@ public:
 
                 while (!foodPref.second.empty())
                 {
-                    out_line += foodPref.second.front();
+                    out_line += to_string(foodPref.second.front());
                     foodPref.second.pop();
                     if (!foodPref.second.empty())
                     {
@@ -80,7 +80,7 @@ public:
         out_line += "NA: [";
         while (!unallocatedStudents.empty())
         {
-            out_line += unallocatedStudents.front().rollNumber;
+            out_line += to_string(unallocatedStudents.front().rollNumber);
             unallocatedStudents.pop();
             if (!unallocatedStudents.empty())
             {
