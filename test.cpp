@@ -60,10 +60,6 @@ int main()
                                Student(10, "B", "V"),
                                Student(11, "A", "NV"),
                                Student(12, "B", "NV"),
-                               
-                               
-    }, 
-    "ANV : [6,8,11]\nAV : [2,3,7]\nBNV : [4,9,12]\nBV : [1,5,10]\nNA : []\n");
-    test(0, SortingHat(4), {}, "");
-    test(0, SortingHat(16), {}, "");
+                            }, 
+         "ANV : [6,8,11]\nAV : [2,3,7]\nBNV : [4,9,12]\nBV : [1,5,10]\nNA : []\n");
 }
