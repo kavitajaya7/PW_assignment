@@ -31,5 +31,39 @@ void test(int test_number, SortingHat sortingHat, vector<Student> students, stri
 
 int main()
 {
-    test(0, SortingHat(12), {}, "");
+    test(0, SortingHat(12), {
+                                Student(1, "B", "V"),
+                                Student(2, "A", "V"),
+                                Student(3, "A", "V"),
+                                Student(4, "B", "NV"),
+                                Student(5, "B", "V"),
+                                Student(6, "A", "NV"),
+                                Student(7, "A", "V"),
+                                Student(8, "A", "NV"),
+                                Student(9, "B", "NV"),
+                                Student(10, "B", "V"),
+                                Student(11, "A", "NV"),
+                                Student(12, "B", "NV"),
+                                Student(13, "A", "NV")
+                            },
+         "ANV : [6,8,11]\nAV : [2,3,7]\nBNV : [4,9,12]\nBV : [1,5,10]\nNA: [13]\n");
+    test(0, SortingHat(12), {
+                               Student(1, "B", "V"),
+                               Student(2, "A", "V"),
+                               Student(3, "A", "V"),
+                               Student(4, "B", "NV"),
+                               Student(5, "B", "V"),
+                               Student(6, "A", "NV"),
+                               Student(7, "A", "NV"),
+                               Student(8, "A", "NV"),
+                               Student(9, "B", "NV"),
+                               Student(10, "B", "V"),
+                               Student(11, "A", "NV"),
+                               Student(12, "B", "NV"),
+                               
+                               
+    }, 
+    "ANV : [6,8,11]\nAV : [2,3,7]\nBNV : [4,9,12]\nBV : [1,5,10]\nNA : []\n");
+    test(0, SortingHat(4), {}, "");
+    test(0, SortingHat(16), {}, "");
 }
