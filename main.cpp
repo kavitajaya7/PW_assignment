@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "sorting_hat.cpp"
+#include "./sorting_hat.cpp"
 
 using namespace std;
 

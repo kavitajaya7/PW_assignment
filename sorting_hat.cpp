@@ -4,7 +4,7 @@
 #include <vector>
 #include <algorithm>
 
-#include "student.cpp"
+#include "./student.cpp"
 
 using namespace std;
 

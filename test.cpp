@@ -1,5 +1,5 @@
 #include <iostream>
-#include "assignment.cpp"
+#include "./sorting_hat.cpp"
 
 using namespace std;
 
